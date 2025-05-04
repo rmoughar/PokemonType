@@ -1,11 +1,21 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
+const windowsStateKeeper = require('electron-window-state');
 
+let win;
 function createWindow () {
-  const win = new BrowserWindow({
-    width: 500,
-    height: 400,
-    frame: false,
+
+  let mainWindowState = windowsStateKeeper({
+    defaultWidth: 500,
+    defaultHeight: 400
+  });
+
+  win = new BrowserWindow({
+    x: mainWindowState.x,
+    y: mainWindowState.y,
+    width: mainWindowState.width,
+    height: mainWindowState.height,
+    //frame: false,
     webPreferences: {
       preload: path.join(__dirname,'preload.js'),
       contextIsolation: true,
@@ -13,11 +23,24 @@ function createWindow () {
     }
   });
 
+  mainWindowState.manage(win);
   win.loadFile('index.html');
 
   //takes in messages from frontend and runs minimize/close 
-  ipcMain.on('minimize-window', () => win.minimize());
-  ipcMain.on('close-window', () => win.close());
+  ipcMain.removeAllListeners('minimize-window');
+  ipcMain.removeAllListeners('close-window');
+
+  ipcMain.on('minimize-window', () => {
+    if(win && !win.isDestroyed()) {
+      win.minimize();
+    }
+  });
+
+  ipcMain.on('close-window', () => {
+    if(win && !win.isDestroyed()) {
+      win.close();
+    }
+  });
 }
 
 app.whenReady().then(() => {

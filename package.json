@@ -16,5 +16,8 @@
     "electron": "^36.1.0",
     "eslint": "^9.26.0",
     "globals": "^16.0.0"
+  },
+  "dependencies": {
+    "electron-window-state": "^5.0.3"
   }
 }
