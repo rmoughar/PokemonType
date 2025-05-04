@@ -29,6 +29,9 @@ backButton.addEventListener('click', () => {
     console.log("back button click");
     resultScreen.classList.add('hidden');
     inputScreen.classList.remove('hidden');
+    document.getElementById('type1').innerHTML = "";
+    document.getElementById('type2').innerHTML = "";
+    document.getElementById('pic').src ='';
 });
 
 //Minimize Event Listeners

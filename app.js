@@ -19,8 +19,8 @@ function renderData(data){
     const type2 = data.types[1] ? capitalizeFirstLetter(data.types[1].type.name) : "None";
     const pic = data.sprites.other['official-artwork'].front_default;
 
-    document.getElementById("type1").innerHTML = type1;
-    document.getElementById("type2").innerHTML = type2;
+    document.getElementById("type1").innerHTML = `Type 1: ${type1}`;
+    document.getElementById("type2").innerHTML = `Type 2: ${type2}`;
     document.getElementById("pic").src = pic;
 }
 
