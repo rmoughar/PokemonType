@@ -1,7 +1,6 @@
 function getType(){
     const pokemon = document.getElementById('pokemon-input').value;
     const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}?format=j1`;   
-    const pokemonInfoDiv = document.getElementById("result-screen");
 
     fetch(url)
     .then(response => response.json())
@@ -11,7 +10,7 @@ function getType(){
     })
     .catch(error => {
         console.error("Error fetching data: ", error);
-        pokemonInfoDiv.innerText = "Oops! Something Went Wrong";
+        document.getElementById('type1').innerHTML = "Oops! Something Went Wrong";
     })
 }
 
@@ -20,10 +19,9 @@ function renderData(data){
     const type2 = data.types[1] ? capitalizeFirstLetter(data.types[1].type.name) : "None";
     const pic = data.sprites.other['official-artwork'].front_default;
 
-    document.getElementById("result-screen").innerHTML =
-        `<p>Type 1: ${type1}</p>
-        <p>Type 2: ${type2}</p>`
-    document.getElementById('pic').src = pic;
+    document.getElementById("type1").innerHTML = type1;
+    document.getElementById("type2").innerHTML = type2;
+    document.getElementById("pic").src = pic;
 }
 
 function capitalizeFirstLetter(string){
@@ -31,3 +29,9 @@ function capitalizeFirstLetter(string){
 }
 
 document.getElementById("submit").addEventListener('click', getType);
+
+document.getElementById("pokemon-input").addEventListener("keypress", event => {
+    if(event.key === "Enter") {
+        document.getElementById("submit").click();
+    }
+});

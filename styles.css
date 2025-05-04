@@ -33,8 +33,18 @@ button:hover {
 #start-minimize, #start-close, #input-minimize, #input-close, #results-minimize, #results-close{
     width:20px;
     height: 20px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
+    color: black;
     border-radius: 50%;
+}
+
+#start-minimize:hover, 
+#start-close:hover, 
+#input-minimize:hover, 
+#input-close:hover, 
+#results-minimize:hover, 
+#results-close:hover{
+    background-color: gray;
 }
 
 
