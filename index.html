@@ -13,9 +13,11 @@
         <!--Start Screen-->
         <div id="start-screen" class="drag">
             <h1>Pokemon Type Checker</h1>
-            <button id="start" class="no-drag">Start!</button>
-            <button id="start-minimize" class="no-drag">_</button>
-            <button id="start-close" class="no-drag">X</button>
+            <button id="start" >Start!</button>
+            <div class="topright no-drag">
+                <button id="start-minimize" class="icon_minimize"></button>
+                <button id="start-close" class="icon_close"></button>
+            </div>
         </div>
 
         <!--Input Screen-->
@@ -24,16 +26,20 @@
             <label for="pokemon-input">Enter a Pokemon:</label>
             <input type="text" id="pokemon-input" placeholder="Enter a Pokemon" class="no-drag">
             <button id="submit" class="no-drag">Submit</button>
-            <button id="input-minimize" class="no-drag">_</button>
-            <button id="input-close" class="no-drag">X</button>
+            <div class="topright no-drag">
+                <button id="input-minimize" class="icon_minimize">_</button>
+                <button id="input-close" class="icon_close">X</button>
+            </div>
     
         </div>
 
         <!--Results Screen-->
         <div id="result-screen" class="hidden drag">
             <h1>Pokemon Type Checker</h1>
-            <button id="result-minimize" class="no-drag">_</button>
-            <button id="result-close" class="no-drag">X</button>
+            <div class="topright no-drag">
+                <button id="result-minimize" class="icon_minimize">_</button>
+                <button id="result-close" class="icon_close">X</button>
+            </div>
             <button id="back" class="no-drag">Back</button>
             <p id="type1" class="no-drag"></p>
             <p id="type2" class="no-drag"></p>
