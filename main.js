@@ -6,15 +6,17 @@ let win;
 function createWindow () {
 
   let mainWindowState = windowsStateKeeper({
-    defaultWidth: 500,
-    defaultHeight: 400
+    width: 400,
+    height: 534,
   });
 
   win = new BrowserWindow({
-    x: mainWindowState.x,
-    y: mainWindowState.y,
-    width: mainWindowState.width,
-    height: mainWindowState.height,
+    //x: mainWindowState.x,
+    //y: mainWindowState.y,
+    width: 434,
+    height: 534,
+    //width: mainWindowState.width,
+    //height: mainWindowState.height,
     frame: false,
     webPreferences: {
       preload: path.join(__dirname,'preload.js'),
@@ -23,7 +25,7 @@ function createWindow () {
     }
   });
 
-  mainWindowState.manage(win);
+  //mainWindowState.manage(win);
   win.loadFile('index.html');
 
   //takes in messages from frontend and runs minimize/close 

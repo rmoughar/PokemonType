@@ -6,44 +6,75 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pokemon Type Checker</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
     </head>
 
     <body>
 
-        <!--Start Screen-->
+        <!--Start Screen
         <div id="start-screen" class="drag">
             <h1>Pokemon Type Checker</h1>
-            <button id="start" >Start!</button>
+            <button id="start" class="Start">Start!</button>
             <div class="topright no-drag">
                 <button id="start-minimize" class="icon_minimize"></button>
                 <button id="start-close" class="icon_close"></button>
             </div>
+        </div>-->
+
+        <!--Start Screen-->
+        <div id="start-screen">
+            <div class="screen drag">
+                <div id="start-top">
+                    <h1>Pokemon Type Checker</h1>
+                    <div class="topright no-drag">
+                        <button id="start-minimize" class="icon_minimize"></button>
+                        <button id="start-close" class="icon_close"></button>
+                    </div>
+                </div>
+                <div id="start-body" class="img-container">
+                    <img id="start-background" src="pokeball_background.png" alt="Rows of pokeballs" class="opacity">
+                    <button id="start" class="Start">Start!</button>  
+                </div>
+            </div>
         </div>
 
+
+
+
+
+
+
+
+
         <!--Input Screen-->
-        <div id="input-screen" class="hidden drag">
-            <h1>Pokemon Type Checker</h1>
-            <label for="pokemon-input">Enter a Pokemon:</label>
-            <input type="text" id="pokemon-input" placeholder="Enter a Pokemon" class="no-drag">
-            <button id="submit" class="no-drag">Submit</button>
-            <div class="topright no-drag">
-                <button id="input-minimize" class="icon_minimize">_</button>
-                <button id="input-close" class="icon_close">X</button>
+        <div id="input-screen" class="hidden">
+            <div class="screen hidden drag">
+                <h1>Pokemon Type Checker</h1>
+                <label for="pokemon-input">Enter a Pokemon:</label>
+                <input type="text" id="pokemon-input" placeholder="Enter a Pokemon" class="no-drag">
+                <button id="submit" class="no-drag">Submit</button>
+                <div class="topright no-drag">
+                    <button id="input-minimize" class="icon_minimize">_</button>
+                    <button id="input-close" class="icon_close">X</button>
+                </div>
             </div>
-    
         </div>
 
         <!--Results Screen-->
-        <div id="result-screen" class="hidden drag">
-            <h1>Pokemon Type Checker</h1>
-            <div class="topright no-drag">
-                <button id="result-minimize" class="icon_minimize">_</button>
-                <button id="result-close" class="icon_close">X</button>
+        <div id="result-screen" class="hidden">
+            <div  class="screen drag">
+                <h1>Pokemon Type Checker</h1>
+                <div class="topright no-drag">
+                    <button id="result-minimize" class="icon_minimize">_</button>
+                    <button id="result-close" class="icon_close">X</button>
+                </div>
+                <button id="back" class="no-drag">Back</button>
+                <p id="type1" class="no-drag"></p>
+                <p id="type2" class="no-drag"></p>
+                <img id="pic" alt="Pokemon Image" width="300" height="300" class="no-drag"></img>
             </div>
-            <button id="back" class="no-drag">Back</button>
-            <p id="type1" class="no-drag"></p>
-            <p id="type2" class="no-drag"></p>
-            <img id="pic" alt="Pokemon Image" width="300" height="300" class="no-drag"></img>
         </div>
         
         <script src="buttons.js"></script>
