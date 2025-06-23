@@ -28,10 +28,10 @@ function capitalizeFirstLetter(string){
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-document.getElementById("submit").addEventListener('click', getType);
+document.getElementById("submit-button").addEventListener('click', getType);
 
 document.getElementById("pokemon-input").addEventListener("keypress", event => {
     if(event.key === "Enter") {
-        document.getElementById("submit").click();
+        document.getElementById("submit-button").click();
     }
 });

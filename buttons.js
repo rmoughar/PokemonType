@@ -1,10 +1,12 @@
+console.log("buttons.js loaded");
+document.addEventListener("DOMContentLoaded", () => {
 const startScreen = document.getElementById('start-screen');
 const inputScreen = document.getElementById('input-screen');
 const resultScreen = document.getElementById('result-screen');
 
-const startButton = document.getElementById('start');
-const submitButton = document.getElementById('submit');
-const backButton = document.getElementById('back');
+const startButton = document.getElementById('start-button');
+const submitButton = document.getElementById('submit-button');
+const backButton = document.getElementById('back-button');
 
 const startMinimize = document.getElementById('start-minimize');
 const startClose = document.getElementById('start-close');
@@ -18,6 +20,9 @@ startButton.addEventListener('click', () => {
     startScreen.classList.add('hidden');
     inputScreen.classList.remove('hidden');
 });
+
+console.log("Start button is:", startButton);
+
 
 submitButton.addEventListener('click', () => {
     console.log("submit button click");
@@ -58,4 +63,5 @@ inputClose.addEventListener('click', () => {
 
 resultClose.addEventListener('click', () => {
     window.windowAPI.close();
+});
 });
