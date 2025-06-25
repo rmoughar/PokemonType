@@ -38,8 +38,8 @@
                 <div id="input-top">
                     <h1>Pokemon Type Checker</h1>
                     <div class="topright no-drag">
-                        <button id="input-minimize" class="icon_minimize">_</button>
-                        <button id="input-close" class="icon_close">X</button>
+                        <button id="input-minimize" class="icon_minimize"></button>
+                        <button id="input-close" class="icon_close"></button>
                     </div>
                 </div>
                 <div id="input-body" class="img-container">
@@ -56,18 +56,30 @@
         </div>
 
 
+
+
+
         <!--Results Screen-->
         <div id="result-screen" class="hidden">
-            <div  class="screen drag">
-                <h1>Pokemon Type Checker</h1>
-                <div class="topright no-drag">
-                    <button id="result-minimize" class="icon_minimize">_</button>
-                    <button id="result-close" class="icon_close">X</button>
+            <div class="screen drag">
+                <div id="result-top">
+                    <h1>Pokemon Type Checker</h1>
+                    <div class="topright no-drag">
+                        <button id="result-minimize" class="icon_minimize"></button>
+                        <button id="result-close" class="icon_close"></button>
+                    </div>
                 </div>
-                <button id="back-button" class="no-drag">Back</button>
-                <p id="type1" class="no-drag"></p>
-                <p id="type2" class="no-drag"></p>
-                <img id="pic" alt="Pokemon Image" width="300" height="300" class="no-drag"></img>
+                <div id="result-body" class="img-container">
+                    <div id="result-box" class="">
+                        <span id="type1" class="type-box">Type 1</span>
+                        <span id="type2" class="type-box">Type 2</span>
+                        <div id="sprite-holder">
+                            <img id="sprite" alt="Pokemon Image" width="300" height="300" class="no-drag"></img>
+                        </div>
+                        <button id="back-button" class="no-drag">Back</button>
+                    </div>
+                    <img id="result-background" src="pokeball_background.png" alt="Rows of pokeballs" class="opacity">
+                </div>
             </div>
         </div>
         

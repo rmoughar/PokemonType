@@ -10,18 +10,18 @@ function getType(){
     })
     .catch(error => {
         console.error("Error fetching data: ", error);
-        document.getElementById('type1').innerHTML = "Oops! Something Went Wrong";
+        document.getElementById('sprite').innerHTML = "Oops! Something Went Wrong";
     })
 }
 
 function renderData(data){
     const type1 = capitalizeFirstLetter(data.types[0].type.name);
     const type2 = data.types[1] ? capitalizeFirstLetter(data.types[1].type.name) : "None";
-    const pic = data.sprites.other['official-artwork'].front_default;
+    const sprite = data.sprites.other['official-artwork'].front_default;
 
-    document.getElementById("type1").innerHTML = `Type 1: ${type1}`;
-    document.getElementById("type2").innerHTML = `Type 2: ${type2}`;
-    document.getElementById("pic").src = pic;
+    document.getElementById("type1").innerHTML = `${type1}`;
+    document.getElementById("type2").innerHTML = `${type2}`;
+    document.getElementById("sprite").src = sprite;
 }
 
 function capitalizeFirstLetter(string){
