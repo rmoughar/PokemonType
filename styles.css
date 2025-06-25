@@ -79,6 +79,13 @@ h1{
     transform: translate(-50%, -50%);
 }
 
+#submit-button{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 #start-button{
     background-color: #EED303;
     width: 40%;
