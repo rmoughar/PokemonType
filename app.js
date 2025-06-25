@@ -1,8 +1,14 @@
 function getType(){
     const pokemon = document.getElementById('pokemon-input').value;
-    const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}?format=j1`;   
+    const url = `https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}?format=j1`;
+    //const url = `https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`;   
+   
 
-    fetch(url)
+    fetch(url , {
+        headers: {
+            'User-Agent': 'Mozilla/5.0'
+        }
+    })
     .then(response => response.json())
     .then(data => {
         console.log(data);

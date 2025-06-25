@@ -17,6 +17,7 @@ function createWindow () {
   });
 
   win.loadFile('index.html');
+  //win.loadURL('http://localhost:5500');
 
   //takes in messages from frontend and runs minimize/close 
   ipcMain.removeAllListeners('minimize-window');
@@ -34,8 +35,6 @@ function createWindow () {
     }
   });
 }
-
-
 
 app.whenReady().then(() => {
   createWindow();

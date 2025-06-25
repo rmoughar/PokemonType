@@ -36,7 +36,7 @@ backButton.addEventListener('click', () => {
     inputScreen.classList.remove('hidden');
     document.getElementById('type1').innerHTML = "";
     document.getElementById('type2').innerHTML = "";
-    document.getElementById('pic').src ='';
+    document.getElementById('sprite').src ='';
 });
 
 //Minimize Event Listeners
