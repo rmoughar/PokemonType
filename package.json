@@ -4,7 +4,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "electron-builder"
   },
   "keywords": [],
   "author": "",
@@ -14,10 +15,18 @@
     "@eslint/css": "^0.7.0",
     "@eslint/js": "^9.26.0",
     "electron": "^37.0.0",
+    "electron-builder": "^26.0.12",
     "eslint": "^9.26.0",
     "globals": "^16.0.0"
   },
   "dependencies": {
     "electron-window-state": "^5.0.3"
+  },
+  "build": {
+    "appId": "com.ramy.pokemon",
+    "productName": "PokemonType",
+    "win": {
+      "target": "nsis"
+    }
   }
 }
