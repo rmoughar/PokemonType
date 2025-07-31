@@ -27,7 +27,7 @@
     "productName": "PokemonType",
     "win": {
       "target": "nsis"
-    }
+    },
     "publish": null
   }
 }
