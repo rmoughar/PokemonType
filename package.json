@@ -28,5 +28,6 @@
     "win": {
       "target": "nsis"
     }
+    "publish": null
   }
 }
